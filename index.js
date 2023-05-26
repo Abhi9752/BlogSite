@@ -12,7 +12,7 @@ app.use(cors({
     origin: '*',
     allowedHeaders: ['Content-Type', 'Authorization',"Access-Control-Allow-Origin"]
 }));
-app.use(require('./Router/auth'));
+app.use(require('./api/index'));
 const PORT = process.env.PORT;
  
 
