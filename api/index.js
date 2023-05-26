@@ -5,14 +5,14 @@ const app = express();
 const cors = require('cors');
 
 dotenv.config({path:"./config.env"})
-require('./DB/connection')
+require('../DB/connection')
 
 app.use(express.json())
 app.use(cors({
     origin: '*',
     allowedHeaders: ['Content-Type', 'Authorization',"Access-Control-Allow-Origin"]
 }));
-app.use(require('./api/auth'));
+app.use(require('../Route/auth'));
 const PORT = process.env.PORT;
  
 
