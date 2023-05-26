@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 const cors = require('cors');
 
 
-router.get('/blogs',cors(), async(req, res) => {
+router.get('/',cors(), async(req, res) => {
     try {
         const allBlogs = await Content.find({})
         res.status(200).send({data:allBlogs});
